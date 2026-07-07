@@ -34198,7 +34198,7 @@ function _App_App() {
             syncViewportVars(hostDoc, false);
             return;
         }
-        if (isAppCrossOrigin || !getFrameElementSafe()) {
+        if (isAppCrossOrigin) {
             const nativeEntered = await requestNativeFullscreen(hostDoc, hostDoc.documentElement);
             if (nativeEntered) {
                 globalState.active = true;
